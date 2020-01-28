@@ -1,16 +1,15 @@
-
+var APIKey = 'ae2c0c6f56fe4a111a8ba8102d61ecdc'
 $(document).ready(function(){
    function loadPage(){
       // input search btn function
-      var cityName = $("#cityName").val().trim();
-      console.log(cityName);
+       var cityName = $("#cityName").val().trim();
+      // var APIKey = 'ae2c0c6f56fe4a111a8ba8102d61ecdc'
+    
      $.ajax({ 
        url:"https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appId=ae2c0c6f56fe4a111a8ba8102d61ecdc&units=imperial",
        method:  "GET"
-     }).then(function(response){
-      console.log(response);       
+     }).then(function(response){     
       var currentDate = moment().format("MM/DD/YYYY")
-      console.log(currentDate)
       var currentCity = response.name
        var humidity = response.main.humidity
        var WindSpeed = response.wind.speed
@@ -24,31 +23,36 @@ $(document).ready(function(){
        $("#Temp").empty()
        $("#Temp").append("Temprature: "+temperature+"°F");
 
-//  call 5 days forcast, does not work
-       $.ajax({
-        url:"https://samples.openweathermap.org/data/2.5/forecast?q="+cityName+",us&mode=xml&appid=b6907d289e10d714a6e88b30761fae22",
-        method:"GET"
-      }).then(function(response){
-        console.log("5dayForcase"+response);
- 
-      })
+   
      })
-    
-     //https://samples.openweathermap.org/data/2.5/forecast?q=London,us&mode=xml&appid=b6907d289e10d714a6e88b30761fae22
-  };
+     //  call 5 days forcast,
+     $.ajax({
+      url:"https://api.openweathermap.org/data/2.5/forecast?q="+cityName+",us&mode=json&appid=" + APIKey + "&units=imperial",
+      method:"GET"
+    }).then(function(response){
+      console.log("5dayForcase"+response);
+    })
+
+    }
+
+  
+
     $("#search-btn").on("click", function(){
       console.log("click")
       loadPage();
-    })
+    });
 
 
 
 // city btn function, always go to the first one
   function loadPage2(){
     
-     var cityName = $("")
-     console.log(cityName)
+    $(".city-btn").on("click",function(){
+
+      console.log($(this).val());
+   
      
+    }); 
     $.ajax({ 
       url:"https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appId=ae2c0c6f56fe4a111a8ba8102d61ecdc&units=imperial",
       method:  "GET"
@@ -71,14 +75,14 @@ $(document).ready(function(){
       $("#Temp").append("Temprature: "+temperature+"°F");
     })
  };
-   $(".city-btn").on("click", function(){
-     console.log("click")
-     loadPage2();
+   $("#New York").on("click", function(){
+     cityName = "New York";
+     loadPage();
    })
 });
   
    
-
+// Boston Chicago Omaha Phoenix Dallas
     // $("#search-btn").on("click", function(
 
     // )
