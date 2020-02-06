@@ -1,94 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-   <link rel="stylesheet" href="style.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
+
 <body>
-    
-    <div class="container">
-      <br>
+
+  <div class="container">
+    <br>
     <div class="row">
       <div class="col-sm-2">
-      <br>
-        <div  >
+        <br>
+        <div>
           <h2 id="searchTitle">
-          Search For a City
+            Search For a City
           </h2>
-          
-      
-      <input type="text" id="cityName" class="form-control">
-      <br>
-      <button id="search-btn" class="btn btn-primary">
-          Search
-      </button>
-  
-      <br><br>
-      <button type="button" class="btn btn-lg btn-outline-info btn-group city-btn" id="New York" >New York</button>
-      <button type="button"  class="btn btn-lg btn-outline-info btn-group city-btn" id="Boston">Boston</button>
-      <button type="button" class="btn btn-lg btn-outline-info  btn-group city-btn" id="Chicago">Chicago</button>
-      <button type="button" class="btn btn-lg btn-outline-info  btn-group city-btn" id="Omaha">Omaha</button>
-      <button type="button" class="btn btn-lg btn-outline-info  btn-group city-btn" id="Phoenix">Phoenix</button>
-      <button type="button" class="btn btn-lg btn-outline-info  btn-group city-btn" 
-      id="Dallas">Dallas</button>
-      
+
+
+          <input type="text" id="cityName" class="form-control">
+          <br>
+          <button id="search-btn" class="btn btn-primary">
+            Search
+          </button>
+
+          <br><br>
+          <button type="button" class="btn btn-lg btn-outline-info btn-group city-btn " id="New-York">New York</button>
+          <button type="button" class="btn btn-lg btn-outline-info btn-group city-btn " id="Boston">Boston</button>
+          <button type="button" class="btn btn-lg btn-outline-info  btn-group city-btn" id="Chicago">Chicago</button>
+          <button type="button" class="btn btn-lg btn-outline-info  btn-group city-btn" id="Omaha">Omaha</button>
+          <button type="button" class="btn btn-lg btn-outline-info  btn-group city-btn" id="Phoenix">Phoenix</button>
+          <button type="button" class="btn btn-lg btn-outline-info  btn-group city-btn" id="Dallas">Dallas</button>
+
+        </div>
+      </div>
+
+      <div class="col-sm-10">
+        <div class="jumbotron col-sm-10">
+          <div class=" city ">City Name</div>
+          <br>
+          <p id="Temp">Temprature</p>
+          <p id="Humi">Humidity</p>
+          <p id="Wind">Wind Speed</p>
+          <p id="UV">UV Index</p>
+        </div>
+
+        <h3>5 Day Forecast</h3>
+        <div class="row ">
+          <div class="foreCast col-sm-2">
+            <div id="date1">Date:</div>
+            <div id="Icon1">Icon</div>
+            <div id="Temp1">Temp:</div>
+            <div id="Huminity1">Humidity:</div>
+          </div>
+          <div class="foreCast col-sm-2">
+            <div id="date2">Date:</div>
+            <div id="Icon2">Icon</div>
+            <div id="Temp2">Temp:</div>
+            <div id="Huminity2">Humidity:</div>
+          </div>
+          <div class="foreCast col-sm-2">
+            <div id="date3">Date:</div>
+            <div id="Icon3">Icon</div>
+            <div id="Temp3">Temp:</div>
+            <div id="Huminity3">Humidity:</div>
+          </div>
+          <div class="foreCast col-sm-2">
+            <div id="date4">Date:</div>
+            <div id="Icon4">Icon</div>
+            <div id="Temp4">Temp:</div>
+            <div id="Huminity4">Humidity:</div>
+          </div>
+          <div class="foreCast col-sm-2">
+            <div id="date5">Date:</div>
+            <div id="Icon5">Icon</div>
+            <div id="Temp5">Temp:</div>
+            <div id="Huminity5">Humidity:</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-     
-     <div class="col-sm-10">
-     <div class="jumbotron col-sm-10" >
-      <div class=" city ">City Name</div>
-      <br>
-      <p id="Temp">Temprature</p>
-      <p id="Humi">Humidity</p>
-      <p id="Wind">Wind Speed</p> 
-      <p id="UV" >UV Index</p>    
-    </div>
-   
-      <h3>5 Day Forecast</h3>
-      <div class="row ">
-      <div class="foreCast col-sm-2">Date
-        <div>Icon</div>
-        <div>Temp:</div>
-        <div>Huminity:</div>
-      </div>
-      <div class="foreCast col-sm-2">Date
-        <div>Icon</div>
-        <div>Temp:</div>
-        <div>Huminity:</div>
-      </div>
-      <div class="foreCast col-sm-2">Date
-        <div>Icon</div>
-        <div>Temp:</div>
-        <div>Huminity:</div>
-      </div>
-      <div class="foreCast col-sm-2">Date
-        <div>Icon</div>
-        <div>Temp:</div>
-        <div>Huminity:</div>
-      </div>
-      <div class="foreCast col-sm-2">Date
-        <div>Icon</div>
-        <div>Temp:</div>
-        <div>Huminity:</div>
-      </div>
-    </div>
-    </div>
-    </div>
-  </div>
-    
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <script src="script.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="new.js"></script>
 </body>
+
 </html>

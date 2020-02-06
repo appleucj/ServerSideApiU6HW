@@ -26,33 +26,41 @@ $(document).ready(function(){
    
      })
      //  call 5 days forcast,
+     function forcast(){
+
      $.ajax({
       url:"https://api.openweathermap.org/data/2.5/forecast?q="+cityName+",us&mode=json&appid=" + APIKey + "&units=imperial",
       method:"GET"
     }).then(function(response){
-      console.log("5dayForcase"+response);
+      console.log("5DAYS", response);
+      $("#date1").append(currentDate);
+      $("#Icon1")
+      $("Temp1").append()
     })
 
-    }
+    }}
 
   
 
     $("#search-btn").on("click", function(){
       console.log("click")
+      var cityName = "New York";
       loadPage();
     });
 
-
+    //loadPage2()
 
 // city btn function, always go to the first one
-  function loadPage2(){
+  // function loadPage2(){
     
     $(".city-btn").on("click",function(){
-
-      console.log($(this).val());
-   
-     
+      console.log("city-btn onclick");
+      var cityName = $(this).text();
+          forcast();
+      // getWeather(cityName);
+      
     }); 
+
     $.ajax({ 
       url:"https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appId=ae2c0c6f56fe4a111a8ba8102d61ecdc&units=imperial",
       method:  "GET"
@@ -74,11 +82,12 @@ $(document).ready(function(){
       $("#Temp").empty()
       $("#Temp").append("Temprature: "+temperature+"°F");
     })
- };
-   $("#New York").on("click", function(){
-     cityName = "New York";
-     loadPage();
-   })
+//  };
+  //  $("#New-York").on("click", function(){
+  //    cityName = "New York";
+  //    console.log(cityName);
+  //    loadPage();
+  //  })
 });
   
    
